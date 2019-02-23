@@ -17,9 +17,14 @@ $(document).ready(function() {
         myParam = "%"+chosen;
       }
       $('#status').text(myParam);
+
+      $.post( "https://io.adafruit.com/api/v2/webhooks/feed/zdwpuA8HvJTMVo4nE6LVcfgi9hpf", { value: String(myParam)} );
+
   });
 
   $('#clear').on('click', function() {
-    $('#customtext').val('');
+    $('#customtext').val('');it
   })
+
+
 });
