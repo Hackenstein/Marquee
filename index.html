@@ -2,11 +2,15 @@
 <html>
 <head>
   <title>TWU Marquee</title>
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
 <body>
   <h1>TWU Marquee</h1>
   <h2>Gymnastics Messages</h2>
   <div id="mainList">
+    <div id="actionButtons">
+      <button id='submit'>Submit</button>
+    </div>
   <div id="fullList">
   <form id="radios">
     <input type="radio" name="msg" value="-1">Scrollem<br>
@@ -39,15 +43,15 @@
     <input type="radio" name="msg" value="26">Go Hunter!<br>
     <input type="radio" name="msg" value="27">TNT<br>
     <input type="radio" name="msg" value="28">Custom<br>
+    <div class="columns">
     <input id="customtext" type="text" name="customText"><br>
+    <button id='clear'>Clear</button>
+    </div>
   </form>
 </div>
-<div id=actionButtons>
-  <button id='clear'>Clear</button>
-  <button id='submit'>Submit</button>
+</div>
+
   <p id="status"></p>
-</div>
-</div>
   <h2>Competition Order</h2>
   <div id="divCompetition">
   <div id="divRoster">
@@ -74,7 +78,7 @@
     <br><br>
   </form>
 </div>
-  <div id='center'>
+  <div id='centerButtons'>
     <button id='addToCompete'>Add</button>
     <button id="clearCompete">Clear all</button>
     <button id="delete">Delete</button>

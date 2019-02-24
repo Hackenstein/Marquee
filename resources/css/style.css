@@ -1,0 +1,36 @@
+#mainList {
+  display: flex;
+}
+#fullList {
+  flex-wrap:wrap;
+}
+#actionButtons {
+  flex-grow:1;
+  align-content: stretch;
+    max-width:80px;
+}
+.columns {
+  display:inline-flex;
+}
+#clear {
+
+}
+#submit {
+  align-content: stretch;
+  width:70px;
+  min-height: 200px;
+  justify-content: center;
+}
+#divCompetition {
+  display: flex;
+}
+
+#centerButtons {
+  flex-direction: column;
+  max-width:80px;
+  align-content: stretch;
+
+}
+button {
+  margin: 10px 5px;
+}
