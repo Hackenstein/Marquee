@@ -6,8 +6,10 @@
 <body>
   <h1>TWU Marquee</h1>
   <h2>Gymnastics Messages</h2>
+  <div id="mainList">
+  <div id="fullList">
   <form id="radios">
-    <input type="radio" name="msg" value="-1">Scollem<br>
+    <input type="radio" name="msg" value="-1">Scrollem<br>
     <input type="radio" name="msg" value="0">Go TWU!<br>
     <input type="radio" name="msg" value="1">Go T-DUB!<br>
     <input type="radio" name="msg" value="2">I am so Minervous<br>
@@ -39,13 +41,52 @@
     <input type="radio" name="msg" value="28">Custom<br>
     <input id="customtext" type="text" name="customText"><br>
   </form>
+</div>
+<div id=actionButtons>
   <button id='clear'>Clear</button>
   <button id='submit'>Submit</button>
   <p id="status"></p>
-  <h2>Generic Messages</h2>
-  <ol>
-    <li>Go TDUB</li>
-  </ol>
+</div>
+</div>
+  <h2>Competition Order</h2>
+  <div id="divCompetition">
+  <div id="divRoster">
+  <form>
+    <select id="roster" size="20">
+      <option value="10">Go Paige!</option>
+      <option value="11">Go Erin!</option>
+      <option value="12">Go Sadie!</option>
+      <option value="13">Go Nat!</option>
+      <option value="14">Go Bridgette!</option>
+      <option value="15">Go Iz!</option>
+      <option value="16">Go Mads!</option>
+      <option value="17">Go Hope!</option>
+      <option value="18">Go Mack!</option>
+      <option value="19">Go Megs!</option>
+      <option value="20">Go Jenna!</option>
+      <option value="21">Go Bria!</option>
+      <option value="22">Go Mo!</option>
+      <option value="23">Go Kaitlyn!</option>
+      <option value="24">Go Alyssa!</option>
+      <option value="25">Go Domi!</option>
+      <option value="26">Go Hunter!</option>
+    </select>
+    <br><br>
+  </form>
+</div>
+  <div id='center'>
+    <button id='addToCompete'>Add</button>
+    <button id="clearCompete">Clear all</button>
+    <button id="delete">Delete</button>
+    <button id="popTop">Pop Top</button>
+  </div>
+  <div id=divCompete>
+  <form>
+    <select id="compete" size="25">
+    </select>
+  </form>
+</div>
+</div>
   <script
 src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>

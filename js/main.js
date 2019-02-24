@@ -16,17 +16,47 @@ $(document).ready(function() {
       else {
         myParam = "%"+chosen;
       }
-      $('#status').text(myParam);
-
-      $.post( "https://io.adafruit.com/api/v2/webhooks/feed/zdwpuA8HvJTMVo4nE6LVcfgi9hpf", { value: String(myParam)}, function( data, txtstatus ) {
-        $('#statusResult').text("Data Loaded: " + data.completed_at );
-});
+      postToFeed(myParam);
 
   });
 
-  $('#clear').on('click', function() {
-    $('#customtext').val('');it
-  })
+  $('#clearCompete').on('click', function() {
+    $('#compete').text('');
+  });
 
+  $('#delete').on('click', function() {
+    $('#compete option:selected').remove();
+  });
+
+  $('#addToCompete').on('click', function() {
+    //var chosen = $('#roster option:selected').val();
+    //console.log(chosen);
+    var $newRow = $("<option value='" + $('#roster option:selected').val() + "'>"  + $('#roster option:selected').text() + "</option>");
+    $("#compete").append($newRow);
+  });
+
+  $('#popTop').on('click', function() {
+    $('#compete').prop('selectedIndex', 0);
+    var chosen = $('#compete option:selected').val() ;
+    console.log(chosen);
+    var myParam;
+    if (chosen > '28')
+    {
+      myParam=$('#customtext').val();
+    }
+    else {
+      myParam = "%"+chosen;
+    }
+
+    postToFeed(myParam);
+    $('#compete option:selected').remove();
+  });
+
+  function postToFeed(myParam) {
+    $('#status').text(myParam);
+    $.post( "https://io.adafruit.com/api/v2/webhooks/feed/zdwpuA8HvJTMVo4nE6LVcfgi9hpf", { value: String(myParam)}, function( data, txtstatus ) {
+      $('#statusResult').text("Data Loaded: " + data.completed_at );
+    });
+  };
 
 });
