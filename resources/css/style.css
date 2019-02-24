@@ -1,3 +1,7 @@
+body {
+  -webkit-appearance:none;
+}
+
 #mainList {
   display: flex;
 }
@@ -8,6 +12,7 @@
   flex-grow:1;
   align-content: stretch;
     max-width:80px;
+    -webkit-appearance:none;
 }
 .columns {
   display:inline-flex;
@@ -23,6 +28,7 @@
 }
 #divCompetition {
   display: flex;
+  -webkit-appearance:none;
 }
 
 #centerButtons {
