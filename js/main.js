@@ -54,7 +54,7 @@ $(document).ready(function() {
 
   function postToFeed(myParam) {
     $('#status').text(myParam);
-    $.post( "https://io.adafruit.com/api/v2/webhooks/feed/zdwpuA8HvJTMVo4nE6LVcfgi9hpf", { value: String(myParam)}, function( data, txtstatus ) {
+    $.post( "https://io.adafruit.com/api/v2/webhooks/feed/EDHnnAx3SJgiNUTCXr9FHVK42Dpn", { value: String(myParam)}, function( data, txtstatus ) {
       $('#statusResult').text("Data Loaded: " + data.completed_at );
     });
   };
