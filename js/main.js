@@ -40,7 +40,7 @@ $(document).ready(function() {
     var chosen = $('#compete option:selected').val() ;
     console.log(chosen);
     var myParam;
-    if (chosen > '28')
+    if (chosen > '26')
     {
       myParam=$('#customtext').val();
     }
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
   function postToFeed(myParam) {
     $('#status').text(myParam);
-    $.post( "https://io.adafruit.com/api/v2/webhooks/feed/AP6BayCYBYWEQw1ieKCh81kVxPWH", { value: String(myParam)}, function( data, txtstatus ) {
+    $.post( "https://io.adafruit.com/api/v2/webhooks/feed/7rXCpR7HmRTgZvEAMbMoUTXacfUo", { value: String(myParam)}, function( data, txtstatus ) {
       $('#statusResult').text("Data Loaded: " + data.completed_at );
     });
   };
