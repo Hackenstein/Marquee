@@ -9,7 +9,7 @@ $(document).ready(function() {
   $('#submit').on('click',function() {
       var chosen = $('input[name=msg]:checked').val();
       var myParam;
-      if (chosen ==='28')
+      if (chosen ==='27')
       {
         myParam=$('#customtext').val();
       }
